@@ -1,0 +1,497 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-family: "Geologica";
+   font-size: 14px;
+}
+
+html,
+body {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+/* Media Query para 1920x1080 (estou louco rapazeada)*/
+@media screen and (min-width: 1280px) and (max-width: 1920px) and (aspect-ratio: 16/9) {
+   body {
+      transform: scale(
+         calc(100vw / 1920)
+      ); /* Ajusta a escala com base na largura da tela */
+      transform-origin: top left;
+   }
+}
+
+/* Media Query para 1280x720 */
+@media screen and (max-width: 1280px) and (aspect-ratio: 16/9) {
+   body {
+      transform: scale(
+         calc(100vw / 1280)
+      ); /* Ajusta a escala com base na largura da tela */
+      transform-origin: top left;
+   }
+   html,
+   body {
+      overflow-x: hidden;
+   }
+}
+
+@media (max-width: 768px) {
+   html {
+      font-size: 16px;
+      text-align: center;
+   }
+}
+
+/* Tela Home parte 1 */
+#imagemHome {
+   position: relative;
+   align-content: left;
+   flex: 8;
+   width: 100vh;
+   padding: 0%;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
+
+header {
+   font-size: 20px;
+   margin: 0;
+   padding: 0;
+   font-family: "Geologica";
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background-color: #40674d;
+   margin-bottom: 40px;
+}
+
+#menuHome {
+   width: 100%;
+   background-color: #40674d;
+   margin-top: 0;
+   padding-top: 0;
+}
+
+/* Menu fixo em todas as telas */
+.navbar .container-fluid {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding: 0;
+}
+
+.navbar-brand {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-grow: 1;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.navbar-brand img {
+   max-width: 80px;
+   height: auto;
+}
+
+.navbar-collapse {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+
+.navbar-nav {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+}
+
+.nav-item {
+   margin: 0 20px;
+}
+
+.nav-link {
+   color: #f7edd2;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+   color: #f7edd2 !important;
+   font-family: "Geologica", sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+   color: #b9af91 !important;
+}
+
+/* Media query do menu superior */
+@media (max-width: 768px) {
+   .navbar-collapse {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .navbar-nav {
+      flex-direction: column;
+      margin-top: 20px;
+   }
+
+   .nav-item {
+      margin: 10px 0;
+   }
+}
+
+/* Configurações gerais do body */
+body {
+   background-color: #f7edd2;
+   flex-direction: column;
+}
+
+main {
+   flex: 1;
+}
+
+/* Tela de quem somos */
+#quemTitulo,
+#quemTexto {
+   font-family: "Geologica";
+}
+
+#quemTitulo {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 35px;
+}
+
+#quemTextoContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 0 20px;
+   max-width: 1400px;
+   margin: 0 auto;
+   flex-grow: 1;
+}
+
+#quemTexto {
+   flex: 3;
+   text-align: justify;
+   margin-right: 60px;
+}
+
+#whoImage img {
+   max-width: 600px;
+   height: auto;
+   object-fit: contain;
+   margin: 0;
+   align-self: flex-start;
+}
+
+header img {
+   width: 60px;
+}
+
+.container-fluid {
+   background-color: #40674d;
+   font-family: "Geologica";
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+}
+
+/* Tela Home parte 2 */
+.divao {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   padding-left: 0% !important;
+}
+
+.loginho {
+   text-align: center;
+   color: #f7edd2;
+   flex: 2;
+   font-family: "Geologica";
+   border-collapse: collapse;
+   background-color: #2a442a;
+   border-radius: 20px;
+   padding: 50px;
+   margin-left: 50px;
+}
+
+#formHome {
+   padding: 20px;
+   width: 100%;
+}
+
+#divisao {
+   margin-top: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#caixaSenha {
+   margin-top: 15px;
+}
+
+#primeiroAcesso {
+   margin-top: 15px;
+   margin-bottom: 25px;
+}
+
+#cadastroHome {
+   text-decoration: none !important;
+   color: #f7edd2;
+}
+
+#cadastroHome:hover {
+   color: #b9af91;
+}
+
+#botaoHome {
+   background-color: #f7edd2;
+   color: #2a442a;
+   border-style: hidden;
+   padding: 10px;
+   width: 100px;
+   border-radius: 10px;
+}
+
+#botaoHome:hover {
+   background-color: #b9af91;
+}
+
+/* Tela de cadastro */
+#cadastro {
+   width: 450px;
+   background-color: #2a442a;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#formCadastro input {
+   background-color: #f7edd2;
+   margin: 1px;
+}
+
+#cadastro label {
+   display: block;
+   font-size: 14px;
+   color: #f7edd2;
+}
+
+#cadastro input[type="text"] {
+   width: 100%;
+   padding: 5px;
+   margin-bottom: 5px;
+   border: none;
+   border-radius: 5px;
+}
+
+#cadastro button[type="submit"] {
+   width: 100%;
+   padding: 10px;
+   background-color: #f7edd2;
+   color: #2a442a;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   transition: background-color 0.3s;
+}
+
+#cadastro button[type="submit"]:hover {
+   background-color: #b9af91;
+}
+
+#folhaDireita {
+   position: fixed;
+   width: 300px;
+   top: 30px;
+   right: 0;
+   z-index: 10;
+   pointer-events: none;
+}
+
+#folhaEsquerda {
+   position: fixed;
+   width: 300px;
+   bottom: 25px;
+   left: 0;
+   z-index: 10;
+   pointer-events: none;
+}
+
+.navbar-nav {
+   text-align: center;
+}
+
+/* Tela de contato */
+#tituloContato {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 35px;
+   font-family: "Geologica";
+}
+
+/* Lado esquerdo do contato */
+
+#divContato {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1200px;
+   margin: 40px auto;
+   padding: 20px;
+   font-family: "Geologica";
+}
+
+#divForm {
+   width: 45%;
+   background-color: #2a442a;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#msgContato,
+#formContato input {
+   background-color: #f7edd2;
+}
+
+#divForm label {
+   display: block;
+   margin: 10px 0 5px;
+   font-size: 14px;
+   color: #f7edd2;
+}
+
+#divForm input[type="text"],
+#divForm textarea {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: none;
+   border-radius: 5px;
+}
+
+#divForm textarea {
+   height: 80px;
+   resize: none;
+}
+
+#divForm input[type="submit"] {
+   width: 100%;
+   padding: 10px;
+   background-color: #f7edd2;
+   color: #2a442a;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   transition: background-color 0.3s;
+}
+
+#divForm input[type="submit"]:hover {
+   background-color: #b9af91;
+}
+
+/* Lado direito do contato */
+#ladoDireito {
+   width: 45%;
+   text-align: center;
+}
+
+#droneContato {
+   width: 250px;
+   height: auto;
+}
+
+#contatoInfo p {
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   margin: 5px 0;
+   font-size: 20px;
+}
+
+#contatoInfo img {
+   width: 80px;
+   height: auto;
+   margin-right: 10px;
+}
+
+/* Rodapé */
+.footer {
+   bottom: 0;
+   width: 100%;
+   height: 50px;
+   color: #f7edd2;
+   background-color: #40674d;
+   text-align: center;
+   position: absolute;
+   line-height: 48px !important;
+   font-family: "Geologica" !important;
+   margin-top: auto;
+   font-size: 17px;
+}
+
+/* Media query da home */
+@media (max-width: 768px) {
+   .divao {
+      flex-direction: column;
+      align-items: left;
+   }
+   .img,
+   .loginho {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+}
+
+/* tela de Login */
+#tituloLogin {
+   font-family: "Geologica";
+   color: #000000;
+   margin-bottom: 25px;
+}
+
+.image-grid {
+   display: grid;
+   grid-template-columns: repeat(13, auto);
+   gap: 5px;
+   justify-content: center;
+}
+
+.grid-image {
+   width: 90px;
+   height: 90px;
+   object-fit: cover;
+   border-radius: 3px;
+}
+
+.grid-image:hover {
+   transform: scale(1.2);
+}

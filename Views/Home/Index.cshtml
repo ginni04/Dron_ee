@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "_Layout";  // Referência ao layout
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="divao">
+    <div class="img">
+        <img id="imagemHome" src="~/img/crops.png" alt="crops">
+    </div>
+    <div class="loginho">
+        <h2>Faça seu login</h2>
+        <form id="formHome" method="post" asp-action="LoginUser">
+            <label for="user">E-mail: </label>
+            <input type="text" name="user" id="user" /><br />
+            <label for="senha" id="caixaSenha">Senha: </label>
+            <input type="password" name="senha" id="senha" /><br /><br />
+            <button type="submit" id="botaoHome">Entrar</button>
+        </form>
+        <br />
+        <h2 id="primeiroAcesso">Primeiro acesso?</h2>
+        <a id="cadastroHome" asp-area="" asp-controller="Home" asp-action="Cadastro">Faça seu cadastro clicando aqui!</a>
+
+        <!-- Mensagem de sucesso de cadastro -->
+        @if (ViewData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @ViewData["SuccessMessage"]
+            </div>
+        }
+
+        <!-- Mensagem de logout -->
+        @if (ViewData["LogoutMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                @ViewData["LogoutMessage"]
+            </div>
+        }
+
+        <!-- Mensagem de erro (login ou cadastro) -->
+        @if (ViewData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-warning">
+                @ViewData["ErrorMessage"]
+            </div>
+        }
+    </div>
+</div>

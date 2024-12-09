@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<h1 id="tituloContato" class="display-4">CONTRATE NOSSOS SERVIÇOS</h1>
+<div id="divContato">
+  <div id="divForm">
+    <form id="formContato" method="post" asp-action="Adicionar">
+      <label for="nome">Nome: </label>
+      <input type="text" name="Nome" id="nome" />
+      <label for="email">E-mail: </label>
+      <input type="text" name="Email" id="email" />
+      <label for="telefone">Telefone: </label>
+      <input type="text" name="Telefone" id="telefone" />
+      <label for="mensagem">Mensagem: </label>
+      <textarea name="Mensagem" id="msgContato"></textarea>
+      <input type="submit" value="SOLICITE UM ORÇAMENTO" />
+    </form>
+  </div>
+  <div id="ladoDireito">
+    <img id="droneContato" src="/img/drone.png" alt="Drone" />
+    <div id="contatoInfo">
+      <p>
+        <img id="zapContato" src="/img/iconeZap.png" alt="WhatsApp" />
+        (12) 93456-7890
+      </p>
+      <p>
+        <img id="emailContato" src="/img/iconeEmail.png" alt="E-mail" />
+        dron-ee.contato@pragas.com.br
+      </p>
+    </div>
+  </div>
+</div>

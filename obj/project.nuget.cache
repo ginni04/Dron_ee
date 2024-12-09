@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jPM9ZtPb4kE=",
+  "success": true,
+  "projectFilePath": "/home/ginni/Downloads/ProjetoDron-ee/ProjetoDron-ee.csproj",
+  "expectedPackageFiles": [
+    "/home/ginni/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/ginni/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.11/microsoft.netcore.app.host.linux-x64.8.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
